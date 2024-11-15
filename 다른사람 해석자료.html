@@ -16,6 +16,26 @@
                 </ol>
             </div>
             <div id="article">
+                <input type="button" class="night-mode-btn" value="night" onclick="
+                    var target= document.querySelector('body');
+                    var links = document.querySelectorAll('a');
+                    if(this.value =='night') {
+                        target.style.backgroundColor='black';
+                        target.style.color='white';
+                        this.value='white';
+                        links.forEach(function(link) {
+                            link.style.color='powderblue';
+                        })
+
+                    } else {
+                        target.style.backgroundColor='white';
+                        target.style.color='black';
+                        this.value='night';
+                        links.forEach(function(link) {
+                            link.style.color='black';
+                        })
+                    }
+                ">
                 <h2>다른 사람들의 해석자료</h2>
             </div>
         </div>

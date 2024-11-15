@@ -7,6 +7,7 @@
     </head>
     <body>
         <h1><a href="index.html">JOKER</a></h1>
+        
         <div id="grid">
             <div class="right">
                 <ol>
@@ -15,8 +16,30 @@
                     <li><a href="내 해석.html">내 해석과 의견</a></li>
                 </ol>
             </div>
+            
             <div id="article">
+                <input type="button" class="night-mode-btn" value="night" onclick="
+                    var target= document.querySelector('body');
+                    var links = document.querySelectorAll('a');
+                    if(this.value =='night') {
+                        target.style.backgroundColor='black';
+                        target.style.color='white';
+                        this.value='white';
+                        links.forEach(function(link) {
+                            link.style.color='powderblue';
+                        })
+
+                    } else {
+                        target.style.backgroundColor='white';
+                        target.style.color='black';
+                        this.value='night';
+                        links.forEach(function(link) {
+                            link.style.color='black';
+                        })
+                    }
+                ">
                 안녕하세요 테스트입니다.
+                다시 인사드립니다/
             </div>
         </div>
     </body>
